@@ -1,0 +1,28 @@
+# Dependencies
+/node_modules/
+
+# Environment configuration files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+log/
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for uploaded files
+/uploads/
+
+# Production build folder
+/dist/
+
+# Misc
+.DS_Store
