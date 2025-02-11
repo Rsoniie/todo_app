@@ -2,9 +2,19 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import 'dotenv/config'
 
 const app = express();
-mongoose.connect('mongodb://127.0.0.1:27017/todoList');
+
+// console.log(process.env.MONGO_URI)
+
+
+const uri = process.env.MONGO_URI;
+console.log(uri);
+const db_name = "TodoList"
+
+await mongoose.connect(`${uri}/${db_name}`);
+console.log("Mongo DB connected successfully");
 const TodoSchema = new mongoose.Schema({
   text: {
     type: String,
